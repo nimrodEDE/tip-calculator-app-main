@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <div class="input-container">
+          <form action="">
+            <label for="amount">Bill</label><br />
+            <input
+              class="error"
+              type="number"
+              name="amount"
+              id="amount"
+              value=""
+            />
+          </form>
+          <img class="icon" src="./images/icon-dollar.svg" alt="" />
+        </div>
+        <div class="options">
+          <h2>Select Tip %</h2>
+          <div class="grid">
+            <button id="0.05" class="grid-item 1">5%</button>
+            <button id="0.10" class="grid-item 2">10%</button>
+            <button id="0.15" class="grid-item 3">15%</button>
+            <button id="0.25" class="grid-item 4">25%</button>
+            <button id="0.50" class="grid-item 5">50%</button>
+            <input
+              class="active"
+              style="display: none"
+              type="number"
+              id="customInput"
+              name="customInput"
+              value=""
+            />
+            <button id="custom" class="grid-item 6">Custom</button>
+          </div>
+        </div>
+        <div class="input-container">
+          <form action="">
+            <label for="people">Number of People</label>
+            <input type="number" id="people" name="people" value="" />
+            <img class="icon" src="./images/icon-person.svg" alt="" />
+          </form>
+        </div>
+      </div>
+      <div class="right">
+        <div class="row">
+          <p>Tip Amount<br /><span>/ person</span></p>
+          <h3 id="tipAmount">0.0$</h3>
+        </div>
+        <div class="row">
+          <p>Total<br /><span>/ person</span></p>
+          <h3 id="totalAmount">0.0$</h3>
+        </div>
+        <button id="submit">RESET</button>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
